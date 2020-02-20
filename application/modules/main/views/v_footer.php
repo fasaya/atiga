@@ -39,7 +39,7 @@
                     <div class="fo-title-bottom-line white"></div>
                     <div class="clearfix"></div>
                     <div class="fo-posts">
-                        <div class="image-left"><img src="http://placehold.it/80x80" alt="" /></div>
+                        <div class="image-left"><img src="https://placehold.it/80x80" alt="" /></div>
                         <div class="text-box-right">
                             <h6 class="less-mar3 uppercase nopadding text-white"><a href="#">Painting</a></h6>
                             <p>Lorem ipsum dolor sit</p>
@@ -54,7 +54,7 @@
                     <br />
                     <br />
                     <div class="fo-posts">
-                        <div class="image-left"><img src="http://placehold.it/80x80" alt="" /></div>
+                        <div class="image-left"><img src="https://placehold.it/80x80" alt="" /></div>
                         <div class="text-box-right">
                             <h6 class="less-mar3 uppercase nopadding text-white"><a href="#">interior design</a></h6>
                             <p>Lorem ipsum dolor sit</p>
@@ -186,7 +186,7 @@ The following part can be removed on Server for On Demand Loading) -->
     }); /*ready*/
 </script>
 
-
+<script type="text/javascript" src="<?= base_url() ?>template/home/js/cubeportfolio/lightbox-gallery.js"></script>
 
 <script>
     $(window).load(function() {

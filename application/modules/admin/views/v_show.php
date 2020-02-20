@@ -39,14 +39,14 @@ License: You must have a valid license purchased only from templatemonster to le
         <nav class="navbar navbar-expand-xl navbar-light fixed-top hk-navbar">
             <a id="navbar_toggle_btn" class="navbar-toggle-btn nav-link-hover" href="javascript:void(0);"><i class="ion ion-ios-menu"></i></a>
             <a class="navbar-brand" href="dashboard1.html">
-                <img class="brand-img d-inline-block mr-5" src="<?= base_url() ?>template/admin/dist/img/logo.png" alt="brand" />Deepor
+                <img class="brand-img d-inline-block mr-5" src="<?= base_url() ?>template/home/atiga/logo/LOGO-ATIGA-3.png" width="200" alt="brand" />
             </a>
             <ul class="navbar-nav hk-navbar-content">
                 <!-- <li class="nav-item">
                     <a id="settings_toggle_btn" class="nav-link nav-link-hover" href="javascript:void(0);"><i class="ion ion-ios-settings"></i></a>
                 </li> -->
                 <li class="nav-item dropdown dropdown-notifications">
-                    <a class="nav-link dropdown-toggle no-caret" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ion ion-ios-notifications"></i><span class="badge-wrap"><span class="badge badge-primary badge-indicator badge-indicator-sm badge-pill pulse"></span></span></a>
+                    <a class="nav-link dropdown-toggle no-caret" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ion ion-ios-notifications"></i><span class="badge-wrap"></span></a>
                     <div class="dropdown-menu dropdown-menu-right" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
                         <h6 class="dropdown-header">Notifications <a href="javascript:void(0);" class="">View all</a></h6>
                         <div class="notifications-nicescroll-bar">
@@ -332,251 +332,6 @@ License: You must have a valid license purchased only from templatemonster to le
                             </ul>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#user_drp">
-                                <i class="ion ion-ios-laptop"></i>
-                                <span class="nav-link-text">User Interface</span>
-                            </a>
-                            <ul id="user_drp" class="nav flex-column collapse collapse-level-1">
-                                <li class="nav-item">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#Components_drp">
-                                                Components
-                                            </a>
-                                            <ul id="Components_drp" class="nav flex-column collapse collapse-level-2">
-                                                <li class="nav-item">
-                                                    <ul class="nav flex-column">
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="alerts.html">Alerts</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="avatar.html">Avatar</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="badge.html">Badge</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="buttons.html">Buttons</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="cards.html">Cards</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="carousel.html">Carousel</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="collapse.html">Collapse</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="dropdowns.html">Dropdown</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="list-group.html">List Group</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="modal.html">Modal</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="nav.html">Nav</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="navbar.html">Navbar</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="nestable.html">Nestable</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="pagination.html">Pagination</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="popovers.html">Popovers</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="progress.html">Progress</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="tooltip.html">Tooltip</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#content_drp">
-                                                Content
-                                            </a>
-                                            <ul id="content_drp" class="nav flex-column collapse collapse-level-2">
-                                                <li class="nav-item">
-                                                    <ul class="nav flex-column">
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="typography.html">Typography</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="images.html">Images</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="media-object.html">Media Object</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#utilities_drp">
-                                                Utilities
-                                            </a>
-                                            <ul id="utilities_drp" class="nav flex-column collapse collapse-level-2">
-                                                <li class="nav-item">
-                                                    <ul class="nav flex-column">
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="background.html">Background</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="border.html">Border</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="colors.html">Colors</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="embeds.html">Embeds</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="icons.html">Icons</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="shadow.html">Shadow</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="sizing.html">Sizing</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="spacing.html">Spacing</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#forms_drp">
-                                                Forms
-                                            </a>
-                                            <ul id="forms_drp" class="nav flex-column collapse collapse-level-2">
-                                                <li class="nav-item">
-                                                    <ul class="nav flex-column">
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="form-element.html">Form Elements</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="input-groups.html">Input Groups</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="form-layout.html">Form Layout</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="form-mask.html">Form Mask</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="form-validation.html">Form Validation</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="form-wizard.html">Form Wizard</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="file-upload.html">File Upload</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="editor.html">Editor</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#tables_drp">
-                                                Tables
-                                            </a>
-                                            <ul id="tables_drp" class="nav flex-column collapse collapse-level-2">
-                                                <li class="nav-item">
-                                                    <ul class="nav flex-column">
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="basic-table.html">Basic Table</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="data-table.html">Data Table</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="responsive-table.html">Responsive Table</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="editable-table.html">Editable Table</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#charts_drp">
-                                                Charts
-                                            </a>
-                                            <ul id="charts_drp" class="nav flex-column collapse collapse-level-2">
-                                                <li class="nav-item">
-                                                    <ul class="nav flex-column">
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="line-charts.html">Line Chart</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="area-charts.html">Area Chart</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="bar-charts.html">Bar Chart</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="pie-charts.html">Pie Chart</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="realtime-charts.html">Realtime Chart</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="mini-charts.html">Mini Chart</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#maps_drp">
-                                                Maps
-                                            </a>
-                                            <ul id="maps_drp" class="nav flex-column collapse collapse-level-2">
-                                                <li class="nav-item">
-                                                    <ul class="nav flex-column">
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="google-map.html">Google Map</a>
-                                                        </li>
-                                                        <li class="nav-item">
-                                                            <a class="nav-link" href="vector-map.html">Vector Map</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="documentation.html">
-                                <i class="ion ion-ios-book"></i>
-                                <span class="nav-link-text">Documentation</span>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -632,8 +387,6 @@ License: You must have a valid license purchased only from templatemonster to le
                     <button id="reset_settings" class="btn btn-primary btn-block btn-reset mt-30">Reset</button>
                 </div>
             </div>
-            <img class="d-none" src="<?= base_url() ?>template/admin/dist/img/logo-light.png" alt="brand" />
-            <img class="d-none" src="<?= base_url() ?>template/admin/dist/img/logo-dark.png" alt="brand" />
         </div>
         <!-- /Setting Panel -->
 
@@ -822,7 +575,12 @@ License: You must have a valid license purchased only from templatemonster to le
 
     <!-- Init JavaScript -->
     <script src="<?= base_url() ?>template/admin/dist/js/init.js"></script>
-    <script src="<?= base_url() ?>template/admin/dist/js/dashboard2-data.js"></script>
+    <!-- <script src="<?= base_url() ?>template/admin/dist/js/dashboard2-data.js"></script> -->
+
+    <script>
+        // Non sticky version
+        $.toast("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, consequuntur doloremque eveniet eius eaque dicta repudiandae illo ullam. Minima itaque sint magnam dolorum asperiores repudiandae dignissimos expedita, voluptatum vitae velit.")
+    </script>
 
 </body>
 

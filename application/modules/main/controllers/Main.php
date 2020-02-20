@@ -38,4 +38,9 @@ class Main extends CI_Controller
     {
         $this->Temp->view('page/contactus');
     }
+
+    public function gallery()
+    {
+        $this->Temp->view('page/gallery');
+    }
 }

@@ -38,6 +38,7 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>template/home/js/smart-forms/smart-forms.css">
     <link rel="stylesheet" href="<?= base_url() ?>template/home/js/jFlickrFeed/style.css" />
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>template/home/js/cubeportfolio/cubeportfolio.min.css">
+
     <!-- Template's stylesheets END -->
 
     <!--[if lt IE 9]>
@@ -50,13 +51,17 @@
 
     <!-- Skin stylesheet -->
     <style>
+        /* .header-section.style1 {
+            background-color: transparent !important;
+        } */
+
+        body {
+            background-color: black !important;
+        }
+
         @media only screen and (min-width: 1000px) {
             .header-section img {
                 max-width: none !important;
-            }
-
-            .header-section.style1 {
-                background-color: #101010 !important;
             }
 
         }
@@ -108,7 +113,7 @@
                                                 <li class="mega-menu"> <a href="<?= base_url() ?>home">Home</a></li>
                                                 <li class="mega-menu"> <a href="<?= base_url() ?>about">About</a></li>
                                                 <li class="mega-menu"> <a href="<?= base_url() ?>contactus">Contact Us</a></li>
-                                                <li class="right"> <a href="#">Gallery</a> <span class="arrow"></span>
+                                                <li class="right"> <a href="<?= base_url() ?>gallery">Gallery</a> <span class="arrow"></span>
                                                     <ul class="dm-align-2">
                                                         <li> <a href="#">Classic <span class="sub-arrow dark pull-right"><i class="fa fa-angle-right" aria-hidden="true"></i></span> </a> <span class="arrow"></span>
                                                             <ul>

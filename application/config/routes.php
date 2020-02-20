@@ -57,6 +57,10 @@ $route['translate_uri_dashes'] = FALSE;
 $route['home'] = 'main/main/home';
 $route['about'] = 'main/main/about';
 $route['contactus'] = 'main/main/contactus';
+$route['gallery'] = 'main/main/gallery';
 
 // ADMIN
-$route['admin'] = 'admin/home/index';
+$route['adminpanel'] = 'admin/adminpanel/index';
+$route['webadmin'] = 'admin/webadmin';
+$route['webadmin/login'] = "admin/webadmin/login";
+$route['webadmin/logout'] = 'admin/webadmin/logout';
