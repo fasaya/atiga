@@ -41,6 +41,13 @@ License: You must have a valid license purchased only from templatemonster to le
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 
+    <style>
+        p.flash-alert {
+            color: #f83f37 !important;
+            font-size: 14px !important;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -201,7 +208,8 @@ License: You must have a valid license purchased only from templatemonster to le
             <div class="nicescroll-bar">
                 <div class="navbar-nav-wrap">
                     <ul class="navbar-nav flex-row">
-                        <li class="nav-item active">
+                        <!-- <li class="nav-item active"> -->
+                        <li class="nav-item">
                             <a class="nav-link" href="<?= base_url() ?>admin/menu/dashboard">
                                 <i class="ion ion-ios-keypad"></i>
                                 <span class="nav-link-text">Dashboard</span>
@@ -210,7 +218,7 @@ License: You must have a valid license purchased only from templatemonster to le
                         <li class="nav-item">
                             <a class="nav-link link-with-indicator" href="javascript:void(0);" data-toggle="collapse" data-target="#app_drp">
                                 <i class="ion ion-ios-apps"></i>
-                                <span class="nav-link-text">Menu</span>
+                                <span class="nav-link-text">Page Setting</span>
                             </a>
                             <ul id="app_drp" class="nav flex-column collapse collapse-level-1">
                                 <li class="nav-item">
@@ -225,6 +233,24 @@ License: You must have a valid license purchased only from templatemonster to le
                                 </li>
                             </ul>
                         </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link link-with-indicator" href="javascript:void(0);" data-toggle="collapse" data-target="#app_drp">
+                                <i class="ion ion-ios-apps"></i>
+                                <span class="nav-link-text">Image Setting</span>
+                            </a>
+                            <ul id="app_drp" class="nav flex-column collapse collapse-level-1">
+                                <li class="nav-item">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?= base_url() ?>admin/menu/home">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?= base_url() ?>admin/menu/about">About</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link" href="javascript:void(0);" data-toggle="collapse" data-target="#pages_drp">
                                 <i class="ion ion-ios-copy"></i>
@@ -252,7 +278,12 @@ License: You must have a valid license purchased only from templatemonster to le
                                 </li>
                             </ul>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url() ?>admin/setting/info">
+                                <i class="ion ion-ios-information-circle"></i>
+                                <span class="nav-link-text">Info</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

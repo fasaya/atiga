@@ -11,17 +11,15 @@
 <div class="container">
 
     <!-- Title -->
-    <div class="hk-pg-header">
-        <h4 class="hk-pg-title"><span class="pg-title-icon"><span class="feather-icon"><i data-feather="database"></i></span></span>Data Tables</h4>
-    </div>
+    <!-- <div class="hk-pg-header">
+        <h4 class="hk-pg-title"><span class="pg-title-icon"><span class="feather-icon"><i data-feather="database"></i></span></span>Home</h4>
+    </div> -->
     <!-- /Title -->
 
     <!-- Row -->
     <div class="row">
         <div class="col-xl-12">
             <section class="hk-sec-wrapper">
-                <h5 class="hk-sec-title">Data Table</h5>
-                <p class="mb-40">Add advanced interaction controls to HTML tables like <code>search, pagination & selectors</code>. For responsive table just add the <code>responsive: true</code> to your DataTables function. <a href="https://datatables.net/reference/option/">View all options</a>.</p>
                 <div class="row">
                     <div class="col-sm">
                         <div class="table-wrap">
