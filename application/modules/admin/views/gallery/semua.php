@@ -1,8 +1,7 @@
 <!-- Breadcrumb -->
 <nav class="hk-breadcrumb" aria-label="breadcrumb">
     <ol class="breadcrumb breadcrumb-light bg-transparent">
-        <li class="breadcrumb-item"><a href="#">Page Content</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Home</li>
+        <li class="breadcrumb-item active" aria-current="page">Gallery</li>
     </ol>
 </nav>
 <!-- /Breadcrumb -->
@@ -30,8 +29,9 @@
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Name</th>
-                                        <th>Text</th>
+                                        <th>Judul</th>
+                                        <th>Keterangan</th>
+                                        <th>Gambar</th>
                                         <th>Edit</th>
                                     </tr>
                                 </thead>
@@ -49,12 +49,12 @@
 
 <!-- JS -->
 <script type="text/javascript" language="javascript">
-    $(document).on("click", "#textHomeDetail", function(e) {
+    $(document).on("click", "#galleryDetail", function(e) {
         e.preventDefault();
         $('.modal-dialog').removeClass('modal-sm')
-            .removeClass('modal-md')
-            .addClass('modal-lg');
-        $("#modal-title").text('Edit');
+            .removeClass('modal-lg')
+            .addClass('modal-md');
+        $("#modal-title").text('Detail');
         $("#modal-body").load($(this).attr("href"));
         $("#modalKu").modal("show");
     });
@@ -65,11 +65,11 @@
             "serverSide": true,
             "order": [],
             "ajax": {
-                url: "<?= base_url() . 'admin/menu/fetch_textHome'; ?>",
+                url: "<?= base_url() . 'admin/gallery/fetch_gallery'; ?>",
                 type: "POST"
             },
             "columnDefs": [{
-                "targets": [0, 1, 2, 3],
+                "targets": [0, 1, 2, 3, 4],
                 "orderable": false,
             }, ],
         });

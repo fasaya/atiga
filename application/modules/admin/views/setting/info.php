@@ -30,7 +30,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="icon-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Nama Website" name="nama_web">
+                            <input type="text" class="form-control" placeholder="Nama Website" name="nama_web" value="<?= $this->Other->get_back_info('nama_web'); ?>">
                         </div>
                         <?= form_error('nama_web', '<p class="flash-alert">', '</p>'); ?>
                     </div>
@@ -40,7 +40,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="icon-lock"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Alamat" name="alamat">
+                            <input type="text" class="form-control" placeholder="Alamat" name="alamat" value="<?= $this->Other->get_back_info('alamat'); ?>">
                         </div>
                         <?= form_error('alamat', '<p class="flash-alert">', '</p>'); ?>
                     </div>
@@ -50,7 +50,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="icon-envelope-open"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Email" name="email">
+                            <input type="text" class="form-control" placeholder="Email" name="email" value="<?= $this->Other->get_back_info('email'); ?>">
                         </div>
                         <?= form_error('email', '<p class="flash-alert">', '</p>'); ?>
                     </div>
@@ -62,7 +62,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="icon-phone"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="No. Telepon" name="no_tlp">
+                            <input type="text" class="form-control" placeholder="No. Telepon" name="no_tlp" value="<?= $this->Other->get_back_info('no_tlp'); ?>">
                         </div>
                         <?= form_error('no_tlp', '<p class="flash-alert">', '</p>'); ?>
                     </div>
@@ -72,7 +72,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="icon-phone"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="No. Whatsapp" name="no_wa">
+                            <input type="text" class="form-control" placeholder="No. Whatsapp" name="no_wa" value="<?= $this->Other->get_back_info('no_wa'); ?>">
                         </div>
                         <?= form_error('no_wa', '<p class="flash-alert">', '</p>'); ?>
                     </div>
@@ -82,7 +82,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="icon-envelope-open"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Email CS" name="email_cs">
+                            <input type="text" class="form-control" placeholder="Email CS" name="email_cs" value="<?= $this->Other->get_back_info('email_cs'); ?>">
                         </div>
                         <?= form_error('email_cs', '<p class="flash-alert">', '</p>'); ?>
                     </div>

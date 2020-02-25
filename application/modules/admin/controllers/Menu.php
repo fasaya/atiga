@@ -9,6 +9,7 @@ class Menu extends CI_Controller
 
         $this->load->model('Temp_model', 'Temp');
         $this->load->model('MenuHome_model', 'MenuHome');
+        $this->load->library('form_validation');
     }
 
     public function index()
@@ -51,6 +52,27 @@ class Menu extends CI_Controller
     {
         if ($code != "") {
             echo $this->MenuHome->fetch_textHomeDetail($code);
+        }
+    }
+
+    // GANTI ISI WEB
+    public function updt_back_isi($code = "")
+    {
+        if ($code != "") {
+
+            $this->form_validation->set_rules('isi', 'Isi', 'trim|required|xss_clean');
+
+            if ($this->form_validation->run() == false) {
+                $this->home();
+            } else {
+                // Update
+                $this->db->update('back_isi', ['nilai' => $this->input->post('isi', TRUE)], "kode = '" . $code . "'");
+
+                flash_alert("Berhasil update data!");
+                redirect('admin/menu/home');
+            }
+        } else {
+            $this->home();
         }
     }
 }

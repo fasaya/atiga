@@ -5,6 +5,7 @@ class Temp_model extends CI_Model
 {
     function view($view, $main = '', $headfoot = TRUE)
     {
+        $this->load->model('Other_model', 'Other');
         if ($headfoot == TRUE) {
             $this->load->view('v_header');
             $this->load->view($view, $main);

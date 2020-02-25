@@ -21,14 +21,12 @@
                     <address>
                         <strong>Address:</strong>
                         <br>
-                        No.28 - 63739 street lorem ipsum,
-                        <br>
-                        ipsum City, Country
+                        <?= $this->Other->get_back_info('alamat'); ?>
                     </address>
 
-                    <span><strong>Phone:</strong> + 1 (234) 567 8901</span><br>
-                    <span><strong>Email:</strong> email@example.com </span><br>
-                    <span><strong>Fax:</strong> + 1 (234) 567 8901</span>
+                    <span><strong>Phone:</strong> <?= $this->Other->get_back_info('no_tlp'); ?></span><br>
+                    <span><strong>Watsapp:</strong> <?= $this->Other->get_back_info('no_wa'); ?></span><br>
+                    <span><strong>Email:</strong> <?= $this->Other->get_back_info('email'); ?></span>
                 </div>
             </div>
             <!--end item-->

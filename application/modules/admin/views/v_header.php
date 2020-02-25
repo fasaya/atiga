@@ -218,7 +218,7 @@ License: You must have a valid license purchased only from templatemonster to le
                         <li class="nav-item">
                             <a class="nav-link link-with-indicator" href="javascript:void(0);" data-toggle="collapse" data-target="#app_drp">
                                 <i class="ion ion-ios-apps"></i>
-                                <span class="nav-link-text">Page Setting</span>
+                                <span class="nav-link-text">Page Content</span>
                             </a>
                             <ul id="app_drp" class="nav flex-column collapse collapse-level-1">
                                 <li class="nav-item">
@@ -232,6 +232,12 @@ License: You must have a valid license purchased only from templatemonster to le
                                     </ul>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?= base_url() ?>admin/gallery">
+                                <i class="ion ion-ios-keypad"></i>
+                                <span class="nav-link-text">Gallery</span>
+                            </a>
                         </li>
                         <!-- <li class="nav-item">
                             <a class="nav-link link-with-indicator" href="javascript:void(0);" data-toggle="collapse" data-target="#app_drp">
