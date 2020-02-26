@@ -15,7 +15,7 @@
             </div>
             <div class="col-md-4 col-sm-12 colmargin clearfix margin-bottom">
                 <div class="fo-map">
-                    <div class="footer-logo"><img src="<?= base_url() ?>template/home/atiga/logo/LOGO-ATIGA-1.png" height="60" alt="" /></div>
+                    <div class="footer-logo"><img src="<?= base_url() ?>template/home/atiga/logo/logo-atiga-1a.png" height="60" alt="" /></div>
                     <!-- <p>Consectetuer adipiscing elit Suspendisse et justo Praesent mattis commodo</p> -->
 
                     <address>

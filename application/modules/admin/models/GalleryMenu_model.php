@@ -3,6 +3,52 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class GalleryMenu_model extends CI_Model
 {
+
+    // tambah gambar gallery
+    public function add_gallery($data)
+    {
+        $nama_input_file = 'gambar';
+        if ($_FILES[$nama_input_file]['name'] != NULL) {
+
+            //Start manual database transaction
+            $this->db->trans_begin();
+
+            $upload = upload_image($nama_input_file, "./template/home/atiga/gallery", "gly_");
+            if ($upload['is_success'] == TRUE) {
+                $data['file_name'] = $upload['file_name'];
+            }
+            $this->db->insert('tb_gallery', $data);
+
+            if ($this->db->trans_status() === FALSE || $upload['is_success'] == FALSE) {
+                $this->db->trans_rollback();
+                flash_alert("Gagal tambah gambar pada gallery! " . $upload['msg'], "danger");
+                redirect('admin/gallery');
+            } else {
+                $this->db->trans_commit();
+                flash_alert("Berhasil tambah gambar " . $upload['filename'] . " pada gallery!");
+                redirect('admin/gallery');
+            }
+        } else {
+            flash_alert("Anda harus memilih gambar terlebih dahulu!", "danger");
+            redirect('admin/gallery');
+        }
+    }
+
+    // update gambar gallery
+    public function updt_gallery($data)
+    {
+        //Start database transaction
+        $this->db->trans_start();
+        $nama_input_file = 'gambar';
+        if ($_FILES[$nama_input_file]['name'] != NULL) {
+            upload_image($nama_input_file, "./template/home/atiga/gallery", "gly_");
+        }
+
+        $this->db->insert('tb_gallery', $data);
+    }
+
+
+
     // DATATABLES
     function make_query_gallery()
     {
@@ -58,26 +104,86 @@ class GalleryMenu_model extends CI_Model
     }
 
     // DETAIL
-    function fetch_galleryDetail($code)
+    function fetch_galleryDetail($id_gallery)
     {
-        $query = $this->db->query(' SELECT nama, nilai
-                                     FROM back_isi
-                                     WHERE kode = "' . $code . '" ');
+        $query = $this->db->query(' SELECT judul, keterangan, file_name, id_tipe
+                                     FROM tb_gallery
+                                     WHERE id_gallery = "' . $id_gallery . '" ');
         $result = $query->row_array();
 
-        $nama = $result['nama'];
-        $nilai = $result['nilai'];
+        $judul = $result['judul'];
+        $keterangan = $result['keterangan'];
+        $file_name = $result['file_name'];
+        $id_tipe = $result['id_tipe'];
 
         $output = '
-        <form method="POST" action="' . base_url() . 'admin/gallery/updt_gallery/' . $code . '">
+        <form method="POST" action="' . base_url() . 'admin/gallery/updt_gallery/' . $id_gallery . '">
             <div class="row">
                 <div class="col-sm">
-                    <h5>' . $nama . '</h5>
+                    <img src="' . base_url() . 'template/home/atiga/gallery/' . $file_name . '" style="width:300px;"></img><br>
+                    <div class="form-group mb-0 mt-15">
+                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Ganti gambar</span>
+                            </div>
+                            <div class="form-control text-truncate" data-trigger="fileinput"><i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
+                            <span class="input-group-append">
+                                    <span class=" btn btn-primary btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span>
+                            <input type="file" name="gambar">
+                            </span>
+                            <a href="#" class="btn btn-secondary fileinput-exists" data-dismiss="fileinput">Remove</a>
+                            </span>
+                        </div>
+                    </div>
+                    <label class="mt-15">Pilih Tipe</label>
                     <select name="" class="form-control">
-                        <option>Tipe</option>
+                        ' . $this->tipe($id_tipe) . '
                     </select>
+                    <label class="mt-15">Judul</label>
+                    <input class="form-control type="text" placeholder="Judul" name="judul" value="' . $judul . '"></input>
+                    <label class="mt-15">Keterangan</label>
+                    <textarea class="form-control" rows="3" placeholder="Keterangan" name="keterangan">' . $keterangan . '</textarea>
+                </div>
+            </div>
+            <div class="row justify-content-md-center mt-3">
+                <button class="btn btn-success btn-wth-icon icon-wthot-bg icon-right"><span class="btn-text" type="sumbit">Save</span><span class="icon-label"><i class="fa fa-save"></i> </span></button>
+                <a href="' . base_url() . 'admin/gallery/del_gallery/' . $id_gallery . '" class="ml-1"><button class="btn btn-danger btn-wth-icon icon-wthot-bg icon-right"><span class="btn-text">Hapus</span><span class="icon-label"><i class="fa fa-trash-o"></i> </span></button></a>
+            </div>
+        </form>';
+
+        return $output;
+    }
+
+    // tambah gambar
+    function fetch_addGallery()
+    {
+
+        $output = '
+        <form method="POST" action="' . base_url() . 'admin/gallery/add_gallery" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group mb-0">
+                        <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Upload</span>
+                            </div>
+                            <div class="form-control text-truncate" data-trigger="fileinput"><i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
+                            <span class="input-group-append">
+                                    <span class=" btn btn-primary btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span>
+                            <input type="file" name="gambar">
+                            </span>
+                            <a href="#" class="btn btn-secondary fileinput-exists" data-dismiss="fileinput">Remove</a>
+                            </span>
+                        </div>
+                    </div>
+                    <label class="mt-15">Pilih tipe</label>
+                    <select name="tipe" class="form-control">
+                        ' . $this->tipe() . '
+                    </select>
+                    <label class="mt-15">Judul</label>
                     <input class="form-control" type="text" placeholder="Judul" name="judul"></input>
-                    <textarea class="form-control mt-15" rows="3" placeholder="Keterangan" name="keterangan">' . $nilai . '</textarea>
+                    <label class="mt-15">Keterangan</label>
+                    <textarea class="form-control" rows="3" placeholder="Keterangan" name="keterangan"></textarea>
                 </div>
             </div>
             <div class="row justify-content-md-center mt-3">
@@ -86,5 +192,31 @@ class GalleryMenu_model extends CI_Model
         </form>';
 
         return $output;
+    }
+
+    function tipe($id_tipe = "")
+    {
+        $this->db->select("id_tipe, tipe");
+        $this->db->from("tb_gallery_tipe");
+        $this->db->order_by("id_tipe", "ASC");
+        $tipe = $this->db->get()->result();
+
+        $string = '';
+
+        if ($id_tipe == "") {
+            foreach ($tipe as $r) {
+                $string .= '<option value="' . $r->id_tipe . '">' . $r->tipe . '</option>';
+            }
+        } else {
+            foreach ($tipe as $r) {
+                if ($id_tipe == $r->id_tipe) {
+                    $slctd = 'selected';
+                } else {
+                    $slctd = '';
+                }
+                $string .= '<option value="' . $r->id_tipe . '" ' . $slctd . '>' . $r->tipe . '</option>';
+            }
+        }
+        return $string;
     }
 } //end model

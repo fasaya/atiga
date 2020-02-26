@@ -34,7 +34,7 @@ class Menu extends CI_Controller
             $sub_array[] = $no . ".";
             $sub_array[] =  $r->nama;
             $sub_array[] = $r->nilai;
-            $sub_array[] = '<a id="textHomeDetail" href="' . base_url() . 'admin/menu/fetch_textHomeDetail/' . $r->kode . '"><button class="btn btn-icon btn-icon-circle btn-secondary btn-icon-style-2"><span class="btn-icon-wrap"><i class="fa fa-pencil"></i></span></button></a>';
+            $sub_array[] = '<a id="textHomeDetail" href="' . base_url() . 'admin/menu/fetch_textHomeDetail/' . $r->kode . '"><button class="btn btn-sm btn-icon btn-icon-circle btn-secondary btn-icon-style-2"><span class="btn-icon-wrap"><i class="fa fa-pencil"></i></span></button></a>';
             $data[] = $sub_array;
             $no++;
         }

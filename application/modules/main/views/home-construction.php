@@ -84,7 +84,7 @@
                     <div class="container">
                         <div class="mod-menu">
                             <div class="row">
-                                <div class="col-sm-2"> <a href="index.html" title="" class="logo mar-4"> <img src="<?= base_url() ?>template/atiga/logo/LOGO-ATIGA-3.png" height="45" alt=""> </a> </div>
+                                <div class="col-sm-2"> <a href="index.html" title="" class="logo mar-4"> <img src="<?= base_url() ?>template/atiga/logo/logo-atiga-3.png" height="45" alt=""> </a> </div>
                                 <div class="col-sm-10">
                                     <div class="main-nav">
                                         <ul class="nav navbar-nav top-nav">
@@ -795,7 +795,7 @@
                 </div>
                 <div class="col-md-4 col-sm-12 colmargin clearfix margin-bottom">
                     <div class="fo-map">
-                        <div class="footer-logo"><img src="<?= base_url() ?>template/atiga/logo/LOGO-ATIGA-1.png" height="60" alt="" /></div>
+                        <div class="footer-logo"><img src="<?= base_url() ?>template/atiga/logo/logo-atiga-1.png" height="60" alt="" /></div>
                         <!-- <p>Consectetuer adipiscing elit Suspendisse et justo Praesent mattis commodo</p> -->
 
                         <address>

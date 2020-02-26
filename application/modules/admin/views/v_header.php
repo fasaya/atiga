@@ -60,7 +60,7 @@ License: You must have a valid license purchased only from templatemonster to le
         <nav class="navbar navbar-expand-xl navbar-light fixed-top hk-navbar">
             <a id="navbar_toggle_btn" class="navbar-toggle-btn nav-link-hover" href="javascript:void(0);"><i class="ion ion-ios-menu"></i></a>
             <a class="navbar-brand" href="dashboard1.html">
-                <img class="brand-img d-inline-block mr-5" src="<?= base_url() ?>template/home/atiga/logo/LOGO-ATIGA-3.png" width="200" alt="brand" />
+                <img class="brand-img d-inline-block mr-5" src="<?= base_url() ?>template/home/atiga/logo/logo-atiga-3.png" width="200" alt="brand" />
             </a>
             <ul class="navbar-nav hk-navbar-content">
                 <!-- <li class="nav-item">

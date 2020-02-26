@@ -82,6 +82,9 @@
 <script src="<?= base_url() ?>template/admin/vendors/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
 <script src="<?= base_url() ?>template/admin/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
 
+<!-- Jasny-bootstrap  JavaScript -->
+<script src="<?= base_url() ?>template/admin/vendors/jasny-bootstrap/dist/js/jasny-bootstrap.min.js"></script>
+
 <script>
     // Non sticky version
     $.toast("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, consequuntur doloremque eveniet eius eaque dicta repudiandae illo ullam. Minima itaque sint magnam dolorum asperiores repudiandae dignissimos expedita, voluptatum vitae velit.")

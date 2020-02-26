@@ -93,7 +93,7 @@
                     <div class="container">
                         <div class="mod-menu">
                             <div class="row">
-                                <div class="col-sm-2"> <a href="index.html" title="" class="logo mar-4"> <img src="<?= base_url() ?>template/atiga/logo/LOGO-ATIGA-3.png" height="50" alt=""> </a> </div>
+                                <div class="col-sm-2"> <a href="index.html" title="" class="logo mar-4"> <img src="<?= base_url() ?>template/atiga/logo/logo-atiga-3.png" height="50" alt=""> </a> </div>
                                 <div class="col-sm-10">
                                     <div class="main-nav">
                                         <ul class="nav navbar-nav top-nav">
