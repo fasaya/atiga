@@ -34,17 +34,46 @@ class GalleryMenu_model extends CI_Model
         }
     }
 
-    // update gambar gallery
-    public function updt_gallery($data)
+    // tambah gambar gallery
+    public function updt_gallery($id_gallery, $data)
     {
-        //Start database transaction
-        $this->db->trans_start();
         $nama_input_file = 'gambar';
+        $upload_path = './template/home/atiga/gallery';
+        $kode_gambar = "gly_";
+
+        //Start manual database transaction
+        $this->db->trans_begin();
+
         if ($_FILES[$nama_input_file]['name'] != NULL) {
-            upload_image($nama_input_file, "./template/home/atiga/gallery", "gly_");
+
+            // hapus gbr lama
+            $query = $this->db->query(' SELECT file_name
+                                    FROM tb_gallery
+                                    WHERE id_gallery = "' . $id_gallery . '" ');
+            $result = $query->row_array();
+            $fotolama = $result['file_name'];
+            $path = $upload_path . '/' . $fotolama;
+            if (!unlink($path)) {
+                $err =  "Error hapus gambar.";
+            }
+
+            $upload = upload_image($nama_input_file, $upload_path, $kode_gambar);
+            if ($upload['is_success'] == TRUE) {
+                $data['file_name'] = $upload['file_name'];
+            }
         }
 
-        $this->db->insert('tb_gallery', $data);
+        $this->db->update('tb_gallery', $data, "id_gallery = '" . $id_gallery . "'");
+
+        if ($this->db->trans_status() === FALSE || $upload['is_success'] == FALSE) {
+            $this->db->trans_rollback();
+            flash_alert("Gagal edit gallery! " . $upload['msg'], "danger");
+            redirect('admin/gallery');
+        } else {
+            $this->db->trans_commit();
+            flash_alert("Berhasil edit gambar " . $upload['filename'] . " pada gallery!");
+            redirect('admin/gallery');
+        }
     }
 
 
@@ -117,7 +146,7 @@ class GalleryMenu_model extends CI_Model
         $id_tipe = $result['id_tipe'];
 
         $output = '
-        <form method="POST" action="' . base_url() . 'admin/gallery/updt_gallery/' . $id_gallery . '">
+        <form method="POST" action="' . base_url() . 'admin/gallery/updt_gallery/' . $id_gallery . '" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-sm">
                     <img src="' . base_url() . 'template/home/atiga/gallery/' . $file_name . '" style="width:300px;"></img><br>
@@ -136,7 +165,7 @@ class GalleryMenu_model extends CI_Model
                         </div>
                     </div>
                     <label class="mt-15">Pilih Tipe</label>
-                    <select name="" class="form-control">
+                    <select name="tipe" class="form-control">
                         ' . $this->tipe($id_tipe) . '
                     </select>
                     <label class="mt-15">Judul</label>

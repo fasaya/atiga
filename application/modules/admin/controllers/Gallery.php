@@ -64,6 +64,25 @@ class Gallery extends CI_Controller
         }
     }
 
+    // update
+    public function updt_gallery($id_gllery = '')
+    {
+        $this->form_validation->set_rules('tipe', 'Tipe', 'trim|xss_clean|callback_tipe_gallery_check|required');
+        $this->form_validation->set_rules('judul', 'judul', 'trim|xss_clean|required');
+        $this->form_validation->set_rules('keterangan', 'keterangan', 'trim|xss_clean');
+
+        if ($this->form_validation->run() == false || $id_gllery == '') {
+            $this->index();
+        } else {
+            $data = [
+                'id_tipe' => $this->input->post('tipe', TRUE),
+                'judul' => $this->input->post('judul', TRUE),
+                'keterangan' => $this->input->post('keterangan', TRUE)
+            ];
+            $this->Gallery->updt_gallery($id_gllery, $data);
+        }
+    }
+
     // MODAL
     public function fetch_galleryDetail($id_gallery = "")
     {
